@@ -16,13 +16,17 @@ class ViewController: UIViewController {
     
     let initialLocation = CLLocation(latitude: 21.361888 , longitude: -158.055725)
     
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 10000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         centerMapOnLocation(location: initialLocation)
+        
+        let restaurantOne = Restaurant(title: "Kalapawai", type: "American", coordinate:
+            CLLocationCoordinate2D(latitude: 21.346470, longitude: -158.080098))
+        mapView.addAnnotation(restaurantOne)
         
     }
     
